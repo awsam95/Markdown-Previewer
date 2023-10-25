@@ -41,9 +41,9 @@ function App() {
   return (
     <>
       <div>
-        <h1>Markdown Previewer</h1>
-        <div className="boxs-container">
-          <textarea name="editor" id="editor"></textarea>
+        <h1 style={{textAlign: "center"}}>Markdown Previewer</h1>
+        <div className="boxes-container">
+          <textarea name="editor" id="editor" value={markdwonText} onChange={(e) => setMarkdwonText(e.target.value)}></textarea>
           <div id="preview">
             <ReactMarkdown>{markdwonText}</ReactMarkdown>
           </div>
